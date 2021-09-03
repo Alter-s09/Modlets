@@ -1,0 +1,3 @@
+<configs>
+	<set xpath="/items//property[@name='CrosshairOnAim']/@value">false</set>
+</configs>
