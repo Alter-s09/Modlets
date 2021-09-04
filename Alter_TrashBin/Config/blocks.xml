@@ -1,0 +1,60 @@
+<configs>
+	<append xpath="/blocks">
+		<block name="trashcanGrow">
+			<property name="Extends" value="cntBruteStyleTrashCanEmpty"/>
+			<property name="DescriptionKey" value="trashcanGrowDesc"/>
+			<property name="CustomIcon" value="cntBruteStyleTrashCanEmpty"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Material" value="MplasticsNoGlue"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.001"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.Next" value="trashcanNext"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" prob="0"/>
+		</block>
+		<block name="trashcanNext">
+			<property name="Extends" value="trashcanGrow"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="PlantGrowing.Next" value="trashcanBase"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.GrowOnTop" value="trashcanTop"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" prob="0"/>
+		</block>
+		<block name="trashcanTop">
+			<property name="Extends" value="cntBruteStyleTrashCanEmpty"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="MplasticsNoGlue"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="805"/>
+			<property name="ModelOffset" value="0,-.495,0"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="Collide" value="sight"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" prob="0"/>
+		</block>
+		<block name="trashcanBase">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="MplasticsNoGlue"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="Pole1m_cap"/>
+			<property name="Mesh" value="cutout"/>
+			<property name="Frame"/>
+			<property name="Texture" value="357"/>
+			<property name="CanPickup" value="true" param1="trashcanGrow"/>
+			<property class="RepairItems">
+				<property name="resourceScrapPolymers" value="4"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapPolymers" count="1" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" prob="0"/>
+		</block>
+	</append>
+</configs>
+

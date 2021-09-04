@@ -1,0 +1,5 @@
+<configs>
+	<append xpath="/lootcontainers">
+		<lootcontainer id="805" count="0" size="9,9" sound_open="UseActions/open_trashcan" sound_close="UseActions/close_trashcan" open_time="0" loot_quality_template="qualBaseTemplate"/>
+	</append>
+</configs>

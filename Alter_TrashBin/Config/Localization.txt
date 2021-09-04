@@ -1,0 +1,5 @@
+Key,English
+trashcanGrow,Trash Can
+trashcanGrowDesc,Place your unwanted items in the container. Look at the base and pick it up to delete the items in the trash can.
+trashcanTop,Trash Can
+trashcanBase,Trash Can
